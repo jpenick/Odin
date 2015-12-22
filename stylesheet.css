@@ -1,18 +1,20 @@
-html, body, #ct{
-	height: 95%;
-	margin: 0;
-	padding: 0;
-	font-family: helvetica;
+html, body{
+	height: 100%;
+	width: auto;
+	overflow: hidden;
+	font-family: sans-serif;
 }
 
-body > #ct {
-	height: auto;
-	min-height: 100%;
+#ct {
+	bottom: 0;
+	height: 100%;
+	position: relative;
 	text-align: center;
-	padding: 0;
+	padding-bottom: 40px;
 }
 
 #inCt {
+	margin-top: 100px;
 }
 
 img {
@@ -21,24 +23,51 @@ img {
 }
 
 #sBox {
+	padding-left: 10px;
 	width: 600px;
-	height: 30px;
+	height: 35px;
+	border: 1px solid #66f;
 }
 
-input[type=button] {
+input[type=submit] {
+	border: none;
+	background-color: #eee;
+	color: #555;
 
+
+	margin-top: 20px;
+	padding: 10px 15px 10px 15px;
+}
+
+input[type=submit]:hover {
+	border: 1px solid #ccc;
+	padding: 9px 14px 9px 14px;
+
+	color: #222;
 }
 
 footer {
 	text-align: left;
-    height: 2em;
-
+	bottom: 0;
+	position: absolute;
 	background-color: #eee;
+	margin-top: -40px;
+	margin-left: -10px;
+	height: 40px;
+	width: 100%;
+	border: 1px solid #ddd;
 }
 
 ul {
+	display: inline-block;
 	list-style-type: none;
+	margin: 0;
     padding: 5px 5px 5px 35px;
+}
+
+
+#pts {
+	float: right;
 }
 
 li {
