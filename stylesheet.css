@@ -1,0 +1,58 @@
+html, body, #ct{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	font-family: helvetica;
+	display: table;
+}
+
+body > #ct {
+	height: auto;
+	min-height: 100%;
+	text-align: center;
+}
+
+#inCt {
+	padding-bottom: 3em;
+	position: relative;
+}
+
+img {
+	height: 10%;
+	width: 33%;
+}
+
+#sBox {
+	width: 50%;
+}
+
+footer {
+	text-align: left;
+	clear: both;
+    position: relative;
+    height: 3em;
+	display: table-row;
+    margin-top: -3em;
+    margin-bottom: 1em;
+    padding-bottom: 20px;
+	background-color: #eee;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	display: inline;
+	padding-right: 35px;
+}
+
+a {
+	text-decoration: none;
+	font-size: 12px;
+	color: #555;
+}
+
+a:hover {
+	text-decoration: underline;
+}
