@@ -26,6 +26,14 @@ img {
 	padding-left: 10px;
 	width: 600px;
 	height: 35px;
+	border: 1px solid #ddd;
+}
+
+#sBox:hover {
+	border: 1px solid #bbb;
+}
+
+#sBox:focus {
 	border: 1px solid #66f;
 }
 
@@ -33,7 +41,7 @@ input[type=submit] {
 	border: none;
 	background-color: #eee;
 	color: #555;
-
+	font-weight: bold;
 
 	margin-top: 20px;
 	padding: 10px 15px 10px 15px;
