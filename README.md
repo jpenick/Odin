@@ -1,8 +1,8 @@
 # Odin
-For the projects done using [The Odin Project](http://www.theodinproject.com/)'s Web Dev tutorial.
+For the projects done using [The Odin Project's](http://www.theodinproject.com/) Web Dev tutorial.
 
 ### Doople
 Frist project, a mini-project in HTML and CSS, is to reproduce the Google search page (the simple one) for like appearance.
 
-I named it _doople_ because it's a "*doopl*icate" of google. It's silly, I know.
+I named it _doople_ because it's a *duplicate* of google. It's silly, I know.
 
