@@ -2,7 +2,7 @@
 	The code is, I'm sure, rife with bad style,
 	chief among these being rampant code duplication and
 	massive comments,
-	but please forgive me, as I am new.
+	but code first, optimization later!
 */
 
 window.onload = function(){
@@ -31,6 +31,20 @@ window.onload = function(){
 		p2result = prob2(p2Txt.value);
 		p2resBox.innerHTML = 'Result: '+p2result;
 	}
+
+	//PROBLEM 3
+	//init globals
+	var p3Box = document.getElementById("p3Box");
+	var p3Butt = document.getElementById("p3Butt");
+	var p3Txt = document.getElementById("p3Txt");
+	var p3resBox = document.getElementById("p3resBox");
+
+	//add onclick function
+	p3Butt.onclick = function(){
+		p3result = prob3(p3Txt.value);
+		p3resBox.innerHTML = 'Result: '+p3result;
+	}
+}
 }
 
 
@@ -78,4 +92,15 @@ var prob2 = function(n){
 		b = f;
 	};
 	return sum;
+}
+
+/* Problem 3
+The prime factors of 13195 are 5, 7, 13 and 29.
+
+What is the largest prime factor of the number 600851475143 ?
+
+*/
+var prob3 = function(n){
+	//find [prime] factors of n
+	//koth for largest factor
 }
