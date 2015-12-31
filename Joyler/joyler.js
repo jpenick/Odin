@@ -10,22 +10,26 @@ window.onload = function(){
 	//init globals
 	var p1Box = document.getElementById("p1Box");
 	var p1Butt = document.getElementById("p1Butt");
+	var p1Txt = document.getElementById("p1Txt");
+	var p1resBox = document.getElementById("p1resBox");
 
 	//add onclick function
 	p1Butt.onclick = function(){
-		p1result = prob1();
-		p1Box.innerHTML += p1result;
+		p1result = prob1(p1Txt.value);
+		p1resBox.innerHTML = 'Result: '+p1result;
 	}
 
 	//PROBLEM 2
 	//init globals
 	var p2Box = document.getElementById("p2Box");
 	var p2Butt = document.getElementById("p2Butt");
+	var p2Txt = document.getElementById("p2Txt");
+	var p2resBox = document.getElementById("p2resBox");
 
 	//add onclick function
 	p2Butt.onclick = function(){
-		p2result = prob2(4000000);
-		p2Box.innerHTML += p2result;
+		p2result = prob2(p2Txt.value);
+		p2resBox.innerHTML = 'Result: '+p2result;
 	}
 }
 
@@ -37,9 +41,9 @@ If we list all the natural numbers below 10 that are multiples
 
 Find the sum of all the multiples of 3 or 5 below 1000.
 */
-var prob1 = function(){
+var prob1 = function(n){
 	var sum = 0;
-	for (var i=0; i<=1000; i++) {
+	for (var i=0; i<n; i++) {
 		if (i%3==0 || i%5==0) {
 			sum+=i;
 		};
@@ -59,12 +63,12 @@ By considering the terms in the Fibonacci sequence
  whose values do not exceed four million,
   find the sum of the even-valued terms.
 */
-var prob2 = function(){
+var prob2 = function(n){
 	var a = 0;
 	var b = 1;
 	var f = 1; //the fib
 	var sum = 0; //the sum of the even fibs
-	while (f < 4000000) {
+	while (f < n) {
 		f = a+b;
 		//console.log(f+" = "+a+"+"+b);
 		if (f%2 == 0) {
