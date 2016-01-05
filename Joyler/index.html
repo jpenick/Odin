@@ -17,36 +17,127 @@
 	</div>
 	<div id="probs">
 		<div class="pbox" id="p1Box">
-			<a href="https://projecteuler.net/problem=1">Problem 1:</a>
-			<br>
-			Find the sum of all the multiples of 3 or 5 below 1000.
-			<br>
-			<form>
-				<input type="text" value="1000" id="p1Txt"></input>
-				<input type="button" id="p1Butt" value="Click to solve problem 1!"></input>
-			</form>
+			<div class="seeCodeBox">
+				<button id="p1CodeButt" class="seeCodeButt">Hover here to view the code!
+					<div id="p1CodePop" class="codePop">
+						<pre>
+  var prob1 = function(n){
+    var sum = 0;
+    for (var i=0; i&lt;n; i++) {
+      if (i%3==0 || i%5==0) {
+        sum+=i;
+      };
+    };
+    return sum;
+  }						</pre>
+					</div>
+				</button>
+			</div>
+			<div class="pSetup">
+				<a href="https://projecteuler.net/problem=1">Problem 1:</a>
+				<br>
+				Find the sum of all the multiples of 3 or 5 below 1000.
+				<br>
+				<form>
+					<input type="text" value="1000" id="p1Txt"></input>
+					<input type="button" id="p1Butt" value="Click to solve problem 1!"></input>
+				</form>
+			</div>
 		</div>
 		<br>
 		<div class="pbox" id="p2Box">
-			<a href="https://projecteuler.net/problem=2">Problem 2:</a>
-			<br>
-			By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
-			<br>
-			<form>
-				<input type="text" value="4000000" id="p2Txt"></input>
-				<input type="button" id="p2Butt" value="Click to solve problem 2!"></input>
-			</form>
+			<div class="seeCodeBox">
+				<button id="p2CodeButt" class="seeCodeButt">Hover here to view the code!
+					<div id="p2CodePop" class="codePop">
+						<pre>
+  var prob2 = function(n){
+    var a = 0;
+    var b = 1;
+    var f = 1; //the fib
+    var sum = 0; //the sum of the even fibs
+    while (f < n) {
+      f = a+b;
+      if (f%2 == 0) {
+        sum+=f;
+      };
+      a = b;
+      b = f;
+    };
+    return sum;
+  }						</pre>
+					</div>
+				</button>
+			</div>
+			<div class="pSetup">
+				<a href="https://projecteuler.net/problem=2">Problem 2:</a>
+				<br>
+				By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+				<br>
+				<form>
+					<input type="text" value="4000000" id="p2Txt"></input>
+					<input type="button" id="p2Butt" value="Click to solve problem 2!"></input>
+				</form>
+			</div>
 		</div>
 		<br>
 		<div class="pbox" id="p3Box">
-			<a href="https://projecteuler.net/problem=3">Problem 3:</a>
-			<br>
-			What is the largest prime factor of the number 600851475143 ?
-			<br>
-			<form>
-				<input type="text" value="600851475143" id="p3Txt"></input>
-				<input type="button" id="p3Butt" value="Click to solve problem 3!"></input>
-			</form>
+			<div class="seeCodeBox">
+				<button id="p3CodeButt" class="seeCodeButt">Hover here to view the code!
+					<div id="p3CodePop" class="codePop">
+						<pre>
+  var prob3 = function(n){
+    // 1) generate a list of factors
+    var fs= [];
+    for (var i=0; i&lt;=Math.floor(Math.sqrt(n)); i++){
+      if(n%i == 0){
+        fs.push(i);
+        fs.push(n/i);
+      }
+    };
+    fs.sort(function(a,b){return b-a;});
+    
+    // 2) Now get the largest prime!
+    var kingPrime = 1;
+    if(n%2==0){
+      kingPrime = 2;
+    };
+    for (var i=0; i&lt;=fs.length; i++) {
+      if(isPrime(fs[i])){
+        kingPrime = fs[i];
+        break;
+      }
+    };
+    return kingPrime;
+  }
+  
+  // a friendly, neighborhood primality tester
+  var isPrime = function(num) {
+    if(num==2 || num==3 || num==5 || num==7){
+      return true;
+    } else if((num&lt;2) || num%2==0){
+      return false;
+    } else {
+      for (var i=3; i&lt;=Math.floor(Math.sqrt(num)); i+=2){
+        if(num%i==0){
+          return false;
+        }
+      }
+      return true;
+    }
+  }						</pre>
+					</div>
+				</button>
+			</div>
+			<div class="pSetup">
+				<a href="https://projecteuler.net/problem=3">Problem 3:</a>
+				<br>
+				What is the largest prime factor of the number 600851475143 ?
+				<br>
+				<form>
+					<input type="text" value="600851475143" id="p3Txt"></input>
+					<input type="button" id="p3Butt" value="Click to solve problem 3!"></input>
+				</form>
+			</div>
 		</div>
 	</div>
 </div>

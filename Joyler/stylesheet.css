@@ -48,6 +48,10 @@ a.inline_link:hover {
 	color: #ee7711;
 }
 
+pre {
+	font-family: monospace;
+}
+
 #box {
 	margin: 0 auto;
 	max-width: 1000px;
@@ -61,15 +65,32 @@ a.inline_link:hover {
 	padding:10px;
 }
 
-input[type="text"] {
-   background-color: #fff;
-   border: 1px solid #bbb;
-/*   border-top: none; */
-   margin: 0 10px;
-   margin-top: -1px;
+.seeCodeBox {
+	float: right;
 }
 
-input[type="button"] {
+.seeCodeButt .codePop{
+	display: none;
+}
+.seeCodeButt:hover .codePop{
+	display: block;
+	text-align: left;
+	background-color: #ffefbd;
+	border: 1px solid #bbb;
+	padding: 5px;
+	margin: 5px;
+	box-shadow: 3px 3px 3px #bbb;
+}
+
+input[type="text"] {
+	background-color: #fff;
+	border: 1px solid #bbb;
+	margin: 10px;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+input[type="button"], button {
 	color: #444;
 	background-color: #f5f5f5;
 	margin: 10px;
