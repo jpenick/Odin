@@ -140,33 +140,33 @@ var prob3 = function(n){
 
 // a friendly, neighborhood primality tester
 var isPrime = function(num) {
-	console.log("num: "+num);
+	//console.log("num: "+num);
 	// the sqrt of primes under 10 are less'n 3,
 	// if we try to run them through the loop
 	// the loop will be skipped!
 	// so jump out if we meet them.
 	if(num==2 || num==3 || num==5 || num==7){
-		console.log("\tnum is 2,3,5, or 7");
+	//	console.log("\tnum is 2,3,5, or 7");
 		return true;
 
 	} else if((num<2) || num%2==0){ //prolly 1 or even
-		console.log("\tnum is less'n 2 or even");
+	//	console.log("\tnum is less'n 2 or even");
 		return false;
 
 	} else {
 		//check against all odds (well, all the ones that matter)
-		console.log("\tnum is odd")
+	//	console.log("\tnum is odd")
 		// start loop on 3, the next eligible prime
 		for (var i=3; i<=Math.floor(Math.sqrt(num)); i+=2){
-			console.log("\ttesting...");
+	//		console.log("\ttesting...");
 			if(num%i==0){
 				//bested by the odds :(
-					console.log("\t\t not prime \n\t\t\tdivisible by: "+i);
+	//				console.log("\t\t not prime \n\t\t\tdivisible by: "+i);
 				return false;
 			}
 		}
 		//overcame the odds! :D
-		console.log("\t\tand prime");
+	//	console.log("\t\tand prime");
 		return true;
 	}
 }
