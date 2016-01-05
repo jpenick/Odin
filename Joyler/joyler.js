@@ -45,7 +45,6 @@ window.onload = function(){
 		p3resBox.innerHTML = 'Result: '+p3result;
 	}
 }
-}
 
 
 /* Problem 1
@@ -101,6 +100,53 @@ What is the largest prime factor of the number 600851475143 ?
 
 */
 var prob3 = function(n){
-	//find [prime] factors of n
-	//koth for largest factor
+	// we'll start with a straightforward method,
+	// then we'll optimize it
+
+	// 1) generate a list of factors
+	var fs= [];
+	// for factors, you only need to check up to the sqrt
+	// since they come in pairs, you can divide for the rest
+	for (var i=0; i<=Math.floor(Math.sqrt(n)); i++) {
+		if(n%i == 0){
+			fs.push(i);
+			fs.push(n/i);
+		}
+	};
+	//sort it (reversed) to make it easy
+	fs.sort(function(a,b){return b-a;});
+	//console.log("fs: "+fs);
+
+	// 2) Now get the largest prime!
+	// some contingencies:
+	var kingPrime = 1;
+	if(n%2==0){
+		kingPrime = 2;
+	};
+
+	//KotH time!
+	
+
+	return 0;
+}
+
+// a friendly, neighborhood primality tester
+var isPrime = function(num) {
+	if(num==2){
+		return true;
+
+	} else if((n<2) || n%2==0){ //prolly 1 or even
+		return false;
+
+	} else {
+		//check against all odds (well, all the ones that matter)
+		for (var i=3; i<=Math.floor(Math.sqrt(num)); i+=2) {
+			if(num%i==0){
+				//bested by the odds :(
+				return false;
+			}
+			//overcame the odds! :D
+			return true;
+		}
+	}
 }
