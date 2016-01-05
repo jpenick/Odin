@@ -115,7 +115,7 @@ var prob3 = function(n){
 	};
 	//sort it (reversed) to make it easy
 	fs.sort(function(a,b){return b-a;});
-	//console.log("fs: "+fs);
+	console.log("fs: "+fs);
 
 	// 2) Now get the largest prime!
 	// some contingencies:
@@ -124,29 +124,49 @@ var prob3 = function(n){
 		kingPrime = 2;
 	};
 
-	//KotH time!
-	
+	//we even test n (it might be a prime itself!)
+	for (var i=0; i<=fs.length; i++) {
+		//console.log("factor: "+fs[i]+"\n    isPrime: "+isPrime(fs[i]));
+		if(isPrime(fs[i])){
+			// fs is ordered largest to smallest
+			// so the first prime is the biggest prime
+			kingPrime = fs[i];
+			break;
+		}
+	};
 
-	return 0;
+	return kingPrime;
 }
 
 // a friendly, neighborhood primality tester
 var isPrime = function(num) {
-	if(num==2){
+	console.log("num: "+num);
+	// the sqrt of primes under 10 are less'n 3,
+	// if we try to run them through the loop
+	// the loop will be skipped!
+	// so jump out if we meet them.
+	if(num==2 || num==3 || num==5 || num==7){
+		console.log("\tnum is 2,3,5, or 7");
 		return true;
 
-	} else if((n<2) || n%2==0){ //prolly 1 or even
+	} else if((num<2) || num%2==0){ //prolly 1 or even
+		console.log("\tnum is less'n 2 or even");
 		return false;
 
 	} else {
 		//check against all odds (well, all the ones that matter)
-		for (var i=3; i<=Math.floor(Math.sqrt(num)); i+=2) {
+		console.log("\tnum is odd")
+		// start loop on 3, the next eligible prime
+		for (var i=3; i<=Math.floor(Math.sqrt(num)); i+=2){
+			console.log("\ttesting...");
 			if(num%i==0){
 				//bested by the odds :(
+					console.log("\t\t not prime \n\t\t\tdivisible by: "+i);
 				return false;
 			}
-			//overcame the odds! :D
-			return true;
 		}
+		//overcame the odds! :D
+		console.log("\t\tand prime");
+		return true;
 	}
 }
