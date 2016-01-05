@@ -4,48 +4,30 @@
 	massive comments,
 	but code first, optimization later!
 */
+var initProb = function(pNum,pFun){
+	//init globals
+	var pBox = document.getElementById(pNum+"Box");
+	var pButt = document.getElementById(pNum+"Butt");
+	var pTxt = document.getElementById(pNum+"Txt");
+	var pResBox = document.getElementById(pNum+"resBox");
+
+	//add onclick function
+	pButt.onclick = function(){
+		pResult = pFun(pTxt.value);
+		pResBox.innerHTML = 'Result: '+pResult;
+	}
+}
 
 window.onload = function(){
-	//PROBLEM 1
-	//init globals
-	var p1Box = document.getElementById("p1Box");
-	var p1Butt = document.getElementById("p1Butt");
-	var p1Txt = document.getElementById("p1Txt");
-	var p1resBox = document.getElementById("p1resBox");
 
-	//add onclick function
-	p1Butt.onclick = function(){
-		p1result = prob1(p1Txt.value);
-		p1resBox.innerHTML = 'Result: '+p1result;
-	}
+	//PROBLEM 1
+	initProb("p1",prob1);
 
 	//PROBLEM 2
-	//init globals
-	var p2Box = document.getElementById("p2Box");
-	var p2Butt = document.getElementById("p2Butt");
-	var p2Txt = document.getElementById("p2Txt");
-	var p2resBox = document.getElementById("p2resBox");
-
-	//add onclick function
-	p2Butt.onclick = function(){
-		p2result = prob2(p2Txt.value);
-		p2resBox.innerHTML = 'Result: '+p2result;
-	}
+	initProb("p2",prob2);
 
 	//PROBLEM 3
-	//init globals
-	var p3Box = document.getElementById("p3Box");
-	var p3Butt = document.getElementById("p3Butt");
-	var p3Txt = document.getElementById("p3Txt");
-	var p3resBox = document.getElementById("p3resBox");
-
-	//add onclick function
-	p3Butt.onclick = function(){
-
-		document.body.appendChild(div);
-		p3result = prob3(p3Txt.value);
-		p3resBox.innerHTML = 'Result: '+p3result;
-	}
+	initProb("p3".prob3);
 }
 
 
