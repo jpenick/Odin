@@ -3,18 +3,24 @@
 	chief among these being rampant code duplication and
 	massive comments,
 	but code first, optimization later!
+
+	Edit: Optibots! Transform and roll out!
 */
 var initProb = function(pNum,pFun){
 	//init globals
 	var pBox = document.getElementById(pNum+"Box");
 	var pButt = document.getElementById(pNum+"Butt");
 	var pTxt = document.getElementById(pNum+"Txt");
-	var pResBox = document.getElementById(pNum+"resBox");
+
+	var pResBox = document.createElement("div");
+	pResBox.setAttribute("id",pNum+"resBox");
+	pResBox.setAttribute("class","res");
+	//var pResBox = document.getElementById(pNum+"resBox");
 
 	//add onclick function
 	pButt.onclick = function(){
-		pResult = pFun(pTxt.value);
-		pResBox.innerHTML = 'Result: '+pResult;
+		pResBox.innerHTML = 'Result: '+pFun(pTxt.value);
+		pBox.appendChild(pResBox);
 	}
 }
 
@@ -27,7 +33,7 @@ window.onload = function(){
 	initProb("p2",prob2);
 
 	//PROBLEM 3
-	initProb("p3".prob3);
+	initProb("p3",prob3);
 }
 
 
