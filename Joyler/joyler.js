@@ -115,7 +115,7 @@ var prob3 = function(n){
 	};
 	//sort it (reversed) to make it easy
 	fs.sort(function(a,b){return b-a;});
-	console.log("fs: "+fs);
+	//console.log("fs: "+fs);
 
 	// 2) Now get the largest prime!
 	// some contingencies:
