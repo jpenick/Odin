@@ -1,0 +1,89 @@
+html {
+	font-family: sans-serif;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	border-width: 0;
+	font-size: 90%;
+	font-family: "Trebuchet MS", sans-serif;
+	min-height: 800px;
+	background-color:#fff;
+	color: #000;
+}
+
+h2 {
+	color: #6b4e3d;
+	font-weight: bold;
+	padding: 10px 0 5px 0;
+}
+
+#blurb {
+	background-color: #ffefbd;
+	border: 1px solid #bbb;
+	padding: 10px;
+	border-radius: 3px;
+	box-shadow: 3px 3px 3px #bbb;
+}
+
+a {
+	text-decoration: none;
+	font-family: "Courier New", monospace;
+	font-weight: bold;
+	color: #777;
+}
+a:hover {
+	color: #aaa;
+}
+
+a.inline_link {
+	color: #dd6600;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-weight: normal;
+}
+a.inline_link:hover {
+	font-style: italic;
+	color: #ee7711;
+}
+
+#box {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+
+.pbox {
+	border-top:solid 1px #ddd;
+	border-bottom:solid 1px #aaa;
+	border-left:solid 1px #ddd;
+	border-right:solid 1px #aaa;
+	padding:10px;
+}
+
+input[type="text"] {
+   background-color: #fff;
+   border: 1px solid #bbb;
+/*   border-top: none; */
+   margin: 0 10px;
+   margin-top: -1px;
+}
+
+input[type="button"] {
+	color: #444;
+	background-color: #f5f5f5;
+	margin: 10px;
+	margin-bottom: 0;
+	border: 1px solid #bbb;
+	padding: 5px;
+	text-align: right;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 85%;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: #eee;
+}
+input[type="button"]:hover {
+	color: #555;
+	background-color: #c2c2c2;
+}

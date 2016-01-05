@@ -2,15 +2,19 @@
 <html>
 <head>
 	<title>Joyler</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<script type="text/javascript" src="joyler.js"></script>
 </head>
 <body>
 <div id="box">
-	<p>
-		This here's a little diddly-doo for the Euler Project.
-		<br>
-		The HTML here is just a shell for the Javascript.
-	</p>
+	<div id="overview">
+		<h2>The Joyler Project</h2>
+		<p id="blurb">
+			This here's a little diddly-doo for <a class="inline_link" href="https://projecteuler.net/about">The Euler Project</a>.
+			The HTML here is mostly just a shell for the Javascript.
+			A lot of the base styling is ripped from The Euler Project site itself and then customized to specs I like.
+		</p>
+	</div>
 	<div id="probs">
 		<div class="pbox" id="p1Box">
 			<a href="https://projecteuler.net/problem=1">Problem 1:</a>
@@ -21,7 +25,7 @@
 				<input type="text" value="1000" id="p1Txt"></input>
 				<input type="button" id="p1Butt" value="Click to solve problem 1!"></input>
 			</form>
-			<div id="p1resBox"></div>
+			<div id="p1resBox" class="res"></div>
 		</div>
 		<br>
 		<div class="pbox" id="p2Box">
@@ -33,19 +37,19 @@
 				<input type="text" value="4000000" id="p2Txt"></input>
 				<input type="button" id="p2Butt" value="Click to solve problem 2!"></input>
 			</form>
-			<div id="p2resBox"></div>
+			<div id="p2resBox" class="res"></div>
 		</div>
 		<br>
 		<div class="pbox" id="p3Box">
 			<a href="https://projecteuler.net/problem=3">Problem 3:</a>
 			<br>
-			What is the largest prime factor of the number c ?
+			What is the largest prime factor of the number 600851475143 ?
 			<br>
 			<form>
 				<input type="text" value="600851475143" id="p3Txt"></input>
 				<input type="button" id="p3Butt" value="Click to solve problem 3!"></input>
 			</form>
-			<div id="p3resBox"></div>
+			<div id="p3resBox" class="res"></div>
 		</div>
 	</div>
 </div>

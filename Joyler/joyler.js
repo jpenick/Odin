@@ -41,6 +41,8 @@ window.onload = function(){
 
 	//add onclick function
 	p3Butt.onclick = function(){
+
+		document.body.appendChild(div);
 		p3result = prob3(p3Txt.value);
 		p3resBox.innerHTML = 'Result: '+p3result;
 	}
@@ -100,8 +102,8 @@ What is the largest prime factor of the number 600851475143 ?
 
 */
 var prob3 = function(n){
-	// we'll start with a straightforward method,
-	// then we'll optimize it
+	// we'll try a straightforward method,
+	// we can optimize it later if we want
 
 	// 1) generate a list of factors
 	var fs= [];
