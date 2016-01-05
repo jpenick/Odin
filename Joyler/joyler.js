@@ -8,19 +8,18 @@
 */
 var initProb = function(pNum,pFun){
 	//init globals
-	var pBox = document.getElementById(pNum+"Box");
+	var pSetup = document.getElementById(pNum+"Setup");
 	var pButt = document.getElementById(pNum+"Butt");
 	var pTxt = document.getElementById(pNum+"Txt");
 
 	var pResBox = document.createElement("div");
 	pResBox.setAttribute("id",pNum+"resBox");
 	pResBox.setAttribute("class","res");
-	//var pResBox = document.getElementById(pNum+"resBox");
 
 	//add onclick function
 	pButt.onclick = function(){
 		pResBox.innerHTML = 'Result: '+pFun(pTxt.value);
-		pBox.appendChild(pResBox);
+		pSetup.appendChild(pResBox);
 	}
 }
 

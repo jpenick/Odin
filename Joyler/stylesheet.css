@@ -65,8 +65,24 @@ pre {
 	padding:10px;
 }
 
+.pbox {
+	overflow: auto;
+	margin-bottom: 20px;
+}
+
+.pSetup {
+	display: inline-block;
+	width: 56%;
+}
+
 .seeCodeBox {
+	display: inline-block;
 	float: right;
+}
+
+.seeCodeButt {
+	text-align: left;
+	margin-bottom: 10px;
 }
 
 .seeCodeButt .codePop{
@@ -110,6 +126,7 @@ input[type="button"]:hover {
 }
 
 .res {
+	background-color: #ffefbd;
 	border-top:solid 1px #ddd;
 	border-bottom:solid 1px #aaa;
 	border-left:solid 1px #ddd;
