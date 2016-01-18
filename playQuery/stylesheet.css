@@ -1,9 +1,25 @@
 #gridBox {
 	border: 5px solid #ccc;
+	display: inline-block;
+}
+
+.gridRow {
+	text-align: justify;
+	margin: 0;
+	padding: 0;
+	/*border: 3px solid #000;*/
 }
 
 .gridDiv {
 	display: inline-block;
-	border: 5px solid #c00;
+	text-align: center;
+	/*border: 2px solid #eee;*/
 	padding: 5px;
+	margin: 0;
+	width: 5px;
+	height: 5px;
+}
+
+.filled {
+	background-color: #000;
 }
