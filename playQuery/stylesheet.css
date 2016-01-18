@@ -1,0 +1,9 @@
+#gridBox {
+	border: 5px solid #ccc;
+}
+
+.gridDiv {
+	display: inline-block;
+	border: 5px solid #c00;
+	padding: 5px;
+}

@@ -13,3 +13,7 @@ The project is to complete several of the [Project Euler](https://projecteuler.n
 
 I named it _Joyler_ because it's Javascript and Euler (which is pronounced 'oiler'). I'm sorry it's not particularly clever.
 
+### 2.2 playQuery
+The actual [second project](http://www.theodinproject.com/web-development-101/javascript-and-jquery) is to make a browser version of something akin to sketchpad and Etch-A-Sketch.
+
+_playQuery_ is forced, I'm aware.
