@@ -12,23 +12,28 @@ $(document).ready(function(){
 		$(this).addClass('filled');
 	});
 
+	/* Splitting the for loops and selecting outside the loops
+		makes the whole thing a smidgeon faster. I still recommend
+		moving your cursor slowly, though.
+	*/
 	// make a cool grid
-	var newGrid = function(n){
-		for (var i=0; i<n; i++) {
+	var newGrid = function(r,c){
+		for (var i=0; i<r; i++) {
 			//jQuery scrubs such as I must build from scratch
-			gB.append('<div class="gridRow" id="gR'+i+'"></div>')
-			for (var j=0; j<n; j++) {
-				$('#gR'+i).append('<div class="gridDiv"></div>');
-			};
+			gB.append('<div class="gridRow"></div>')
+		};
+		var gR = $('.gridRow')
+		for (var i=0; i<c; i++) {
+			gR.append('<div class="gridDiv"></div>');
 		};
 	}
-	newGrid(16);
+	newGrid(16,16);
 
 	// shake the etch-a-sketch (erase, prompt for resizing)
 	$('button').click(function() {
 		gB.empty();
-		var n = prompt("How many square pixels?");
-		newGrid(n);
+		var n = prompt("How many square pixels?","30");
+		newGrid(n,n);
 	});
 
 });
