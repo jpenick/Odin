@@ -11,15 +11,12 @@
 	text-align: justify;
 	display: table-row;
 	width: auto;
-	padding: 0;
-	border: 1px solid #000;
+	/*border: 1px solid #000;*/
 }
 
 .gridDiv {
 	text-align: center;
-	border: 1px solid #eee;
-	padding: 5px;
-	margin: 0;
+	/*border: 1px solid #eee;*/
 
 	display: table-cell;
 }
