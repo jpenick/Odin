@@ -1,27 +1,27 @@
 #gridBox {
 	border: 5px solid #ccc;
-	display: block;
-	padding: 5px 5px 0px 5px;
-	height: 230px;
-	width: 240px;
+	height: 600px;
+	width: 600px;
+
+	display: table;
+	table-layout: fixed;
 }
 
 .gridRow {
 	text-align: justify;
-	display: block;
-	margin-bottom: -5px;
+	display: table-row;
+	width: auto;
 	padding: 0;
-	/*border: 1px solid #000;*/
+	border: 1px solid #000;
 }
 
 .gridDiv {
-	display: inline-block;
 	text-align: center;
-	/*border: 1px solid #eee;*/
+	border: 1px solid #eee;
 	padding: 5px;
 	margin: 0;
-	width: 5px;
-	height: 5px;
+
+	display: table-cell;
 }
 
 .filled {
