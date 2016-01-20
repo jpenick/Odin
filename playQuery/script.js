@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	var gB = $('#gridBox');
+	var gB = $('#gridBox');		//container for grid
 
 	/* You've got to delegate the event to someone
 		who'll stick around. The .gridDivs all 
@@ -18,22 +18,23 @@ $(document).ready(function(){
 	*/
 	// make a cool grid
 	var newGrid = function(r,c){
+		console.log('d:'+r);
+		//jQuery scrubs such as I must build from scratch
 		for (var i=0; i<r; i++) {
-			//jQuery scrubs such as I must build from scratch
-			gB.append('<div class="gridRow"></div>')
+			gB.append('<div class="gridRow"></div>');
 		};
-		var gR = $('.gridRow')
+
+		var gR = $('.gridRow');	//rows're better for gridification
 		for (var i=0; i<c; i++) {
 			gR.append('<div class="gridDiv"></div>');
 		};
 	}
-	newGrid(16,16);
+	newGrid(16,16);		//the initial grid
 
 	// shake the etch-a-sketch (erase, prompt for resizing)
 	$('button').click(function() {
-		gB.empty();
+		gB.empty();				//clear the old grid
 		var n = prompt("How many square pixels?","30");
-		newGrid(n,n);
+		newGrid(n,n);				//make a new grid
 	});
-
 });

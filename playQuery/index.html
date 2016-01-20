@@ -2,16 +2,19 @@
 <html>
 <head>
 	<title>playQuery!</title>
+	<meta charset="UTF-8"> 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 <body>
 	<div id="gridOpts">
-		<button>new grid</button>
-		<input type="radio" name="pixel" value="black" checked>Black</input>
-		<input type="radio" name="pixel" value="random">Random</input>
-		<input type="radio" name="pixel" value="darker">Darker</input>
+	<form id="optsForm">
+		<input type="radio" name="pixel" value="b" checked>Black</input>
+		<input type="radio" name="pixel" value="r">Random</input>
+		<input type="radio" name="pixel" value="d">Darker</input>
+		<button type="button">New Grid</button>
+	</form>
 	</div>
 	<div id="gridBox"></div>
 </body>

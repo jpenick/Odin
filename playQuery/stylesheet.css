@@ -16,7 +16,7 @@
 
 .gridDiv {
 	text-align: center;
-	/*border: 1px solid #eee;*/
+	border: 1px solid #eee;
 
 	display: table-cell;
 }
