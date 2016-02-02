@@ -8,6 +8,7 @@ $(document).ready(function(){
 		for the .gridDivs.
 	*/
 	// draw stuff
+	var fill = $('.filled');
 	gB.on('mouseenter', '.gridDiv', function() {
 		$(this).addClass('filled');
 	});
